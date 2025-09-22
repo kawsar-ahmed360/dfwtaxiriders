@@ -1,0 +1,1 @@
+[16-Sep-2025 15:43:21 America/Chicago] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.9". You are running 7.4.33. in /home1/dfwtaxi/public_html/vendor/composer/platform_check.php on line 24

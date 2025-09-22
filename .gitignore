@@ -1,0 +1,41 @@
+# Laravel specific
+/vendor/
+/node_modules/
+
+# Laravel environment files
+.env
+.env.*
+!.env.example
+
+# Laravel cache and logs
+/storage/*.key
+/storage/app/public
+/storage/framework/*
+!/storage/framework/.gitignore
+/storage/logs/*
+!/storage/logs/.gitignore
+
+# Laravel cache bootstrap
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+
+# Composer dependencies
+composer.lock
+
+# NPM/Yarn/Pnpm logs
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# IDE & OS generated files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# PHPUnit cache & coverage
+.phpunit.result.cache
+coverage/
+
+
