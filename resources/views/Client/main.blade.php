@@ -87,7 +87,7 @@
                                 data-voffset="-100" data-transform_idle="o:1;"
                                 data-transform_in="y:top;s:1500;e:Power3.easeInOut;"
                                 data-transform_out="y:top;s:1000;e:Power2.easeInOut;" data-start="500">
-                                <h2>DFW Taxi Riders is <br> Best & affordable Taxi service in <br>Irving,Tx & 
+                                <h2>DFW Taxi Riders is <br> Best & affordable Taxi service in <br>Irving,Tx &
                                     Dallas Fort Worth </h2>
                             </div>
                             <div class="tp-caption tp-resizeme" data-x="center" data-hoffset="0" data-y="middle"
@@ -657,7 +657,7 @@
 @endsection
 
 @section('latest_news')
-    <section class="section-padding">
+    <section class="">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -709,7 +709,7 @@
     </section>
 @endsection
 
-@section('have_question')
+{{-- @section('have_question')
     <section class="section-padding">
         <div class="container">
             <div class="row">
@@ -768,7 +768,7 @@
             </div>
         </div>
     </section>
-@endsection
+@endsection --}}
 
 @section('service')
 
@@ -781,13 +781,28 @@
                         <p>
                             “Need a dependable DFW taxi service near me? Count on DFW Taxi Riders for airport transfers, city rides, and black car service day or night.”
                         </p>
-                        <a href="{{route('Booking')}}" class="button">Book Your Desire Taxi Service with us.</a>
+                        <a href="{{route('Booking')}}" class="button service-area-btn">Book Your Taxi</a>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="service-area-image wow fadeInUp" data-wow-delay="0.2s">
-                        <a href="#"><img src="{{asset('Client/assets/img/home-slider1.jpg')}}" class="img-fluid"
-                                alt="" /></a>
+                        {{-- <a href="#"><img src="{{asset('Client/assets/img/home-slider1.jpg')}}" class="img-fluid"
+                                alt="" /></a> --}}
+                                <div class="grid-container">
+                                    <div class="item tall">
+                                        <img src="https://quanticalabs.com/wp_themes4/autoride/wp-content/uploads/sites/2/2019/10/image_04-2.jpg"
+                                            alt="Image 1">
+                                    </div>
+                                    <div class="item small">
+                                        <img src="https://quanticalabs.com/wp_themes4/autoride/wp-content/uploads/sites/2/2019/10/image_03-2.jpg"
+                                            alt="Image 2">
+                                    </div>
+                                    <div class="item small">
+                                        <img src="https://quanticalabs.com/wp_themes4/autoride/wp-content/uploads/sites/2/2019/10/image_02-2.jpg"
+                                            alt="Image 3">
+                                    </div>
+                                </div>
+
                     </div>
                 </div>
             </div>
