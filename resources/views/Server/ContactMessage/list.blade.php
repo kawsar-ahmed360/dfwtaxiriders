@@ -31,7 +31,7 @@
                            
                              <tr>
                               <td><input type="checkbox" name="subscription_checkbox" value="{{$l->id}}"></td>
-                                 <th scope="row">{{$key+1}}</th>
+                                <th>{{ count($list) - $key }}</th>
                                  <td>{{$l->name}}</td>
                                  <td>{{$l->l_name}}</td>
                                  <td>{{$l->email}}</td>

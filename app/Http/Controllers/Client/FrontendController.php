@@ -248,7 +248,7 @@ class FrontendController extends Controller
     {
 
 
-
+       $registrationId = $this->generateUniqueRegId(); 
         $store = new BookingManage();
         $store->trip_type = $request->trip_type;
         $store->occasion = $request->occasion;
@@ -269,7 +269,7 @@ class FrontendController extends Controller
         $store->second_phone = $request->second_phone;
         $store->message = $request->message;
         $store->payments = $request->payments;
-        $store->reg_id = $this->generateUniqueRegId();
+        $store->reg_id = $registrationId;
         $store->total_amount = $request->total_amount_final;
         $store->hours_distance = $request->hours_distance;
 
@@ -311,11 +311,30 @@ class FrontendController extends Controller
 
 public function generateUniqueRegId(): string
 {
-    do {
-        $regId = Carbon::now()->format('Ymd_His') . '_' . strtoupper(Str::random(4));
-    } while (BookingManage::where('reg_id', $regId)->exists());
+    // do {
+    //     $regId = Carbon::now()->format('Ymd_His') . '_' . strtoupper(Str::random(4));
+    // } while (BookingManage::where('reg_id', $regId)->exists());
 
-    return $regId;
+    // return $regId;
+        // ১. শেষ রেকর্ডের registration_id নিয়ে আসো
+    $lastRecord = BookingManage::orderBy('id', 'desc')->first();
+
+    if ($lastRecord && $lastRecord->registration_id) {
+        // ২. পুরানো registration_id থেকে সংখ্যাটা আলাদা করো
+        // ধরো registration_id ফরম্যাট: NHC2025-00045
+        $lastIdNum = intval(substr($lastRecord->registration_id, strpos($lastRecord->registration_id, '-') + 1));
+        
+        // ৩. নতুন সংখ্যা
+        $newIdNum = $lastIdNum + 1;
+    } else {
+        // যদি কোন রেকর্ড না থাকে, তাহলে শুরু করো 1 থেকে
+        $newIdNum = 1;
+    }
+
+    // ৪. নতুন registration_id তৈরি করো
+    $newRegistrationId = 'Book2025-' . str_pad($newIdNum, 5, '0', STR_PAD_LEFT);
+
+    return $newRegistrationId;
 }
 
 

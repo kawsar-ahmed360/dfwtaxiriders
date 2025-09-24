@@ -12,8 +12,8 @@ class ContactMessageManage extends Controller
 
     public function ContactMessageList(){
 
-        $data['list'] = ContactUs::OrderBy('id','desc')->get();
-        $data['list_m'] = ContactUs::OrderBy('id','desc')->get();
+        $data['list'] = ContactUs::latest()->get();
+        $data['list_m'] = ContactUs::latest()->get();
 
         return view('Server.ContactMessage.list',$data);
     }
