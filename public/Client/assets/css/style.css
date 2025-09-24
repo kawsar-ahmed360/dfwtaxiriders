@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Bangers&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 /**************************************
     -- Css Table of Content
     01.Generale Style
@@ -25,7 +26,7 @@ html {
 body {
     background: #f8f9fa;
     color: #121215;
-    font-family: "Raleway", sans-serif;
+    font-family: "Lato", sans-serif;
     font-size: 14px;
     font-weight: normal;
     line-height: 26px;
@@ -58,7 +59,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-family: "Raleway", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: normal;
     color: var(--color-black);
     line-height: 1.5;
@@ -101,7 +102,7 @@ p {
     font-weight: 500;
     line-height: 26px;
     letter-spacing: 0.5px;
-    font-family: "Raleway", sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 .mt-15 {
@@ -634,7 +635,7 @@ ul {
  * 02.Navber Area Style
  *************************************/
 .header-top {
-    background-color: #0d0b30;
+    background-color: rgb(236, 236, 236);
     position: absolute;
     padding: 20px 0;
     top: 0;
@@ -648,7 +649,7 @@ ul {
     line-height: 28px;
     margin-right: 20px;
     font-weight: 700;
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 .header-top a:hover {
@@ -937,34 +938,38 @@ ul {
 /**************************************
  * 24. Testimonial content Section Style
  *************************************/
- .testimonial-container{
+.testimonial-container {
     background: linear-gradient(rgba(0, 0, 0, 0.582), rgba(0, 0, 0, 0.582)), url(https://images.seattletimes.com/wp-content/uploads/2022/03/urn-publicid-ap-org-5f1a7dbd9ba08562aff894c982b470a9Uber-NYC_Taxis_43737.jpg?d=2040x1360);
     background-repeat: no-repeat;
     background-size: cover;
- }
- .testimonial-carousel{
+}
+
+.testimonial-carousel {
     margin: 0 auto;
     max-width: 800px;
- }
+}
 
 
- .testimonial-carousel .item{
+.testimonial-carousel .item {
     position: relative;
     text-align: center;
     background-color: rgba(20, 26, 28, 0.824);
     padding: 50px 30px;
     margin: 0 30px;
- }
- .testimonial-carousel .owl-item.active{
+}
+
+.testimonial-carousel .owl-item.active {
     display: block;
- }
- .testimonial-carousel .icon-container{
+}
+
+.testimonial-carousel .icon-container {
     color: #fff;
     position: absolute;
     top: -40px;
     background-color: var(--color-yellow);
     left: 50%;
-    transform: translateX(-50%); /* horizontally center */
+    transform: translateX(-50%);
+    /* horizontally center */
     height: 80px;
     width: 80px;
     border-radius: 50%;
@@ -973,21 +978,25 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
- }
-  .testimonial-carousel p{
+}
+
+.testimonial-carousel p {
     color: #fff;
     line-height: 20px;
     margin-bottom: 30px;
     padding-top: 20px;
-  }
-  .testimonial-carousel .author{
+}
+
+.testimonial-carousel .author {
     color: var(--color-yellow);
     font-size: 20px;
     font-weight: 600;
-  }
-  .testimonial-carousel .owl-dots{
-  position: absolute;
-    bottom: 10px;              /* move inside, adjust as needed */
+}
+
+.testimonial-carousel .owl-dots {
+    position: absolute;
+    bottom: 10px;
+    /* move inside, adjust as needed */
     left: 50%;
     transform: translateX(-50%);
     background-color: transparent;
@@ -995,25 +1004,30 @@ ul {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    z-index: 20;               /* bring them in front of .item */
+    z-index: 20;
+    /* bring them in front of .item */
     padding: 40 0 0px 0;
     height: auto;
-  }
+}
 
 .testimonial-carousel .owl-dot span {
     background-color: #fff;
     height: 16px;
     width: 16px;
     border-radius: 50%;
-    display: block; /* make sure it shows as a block element */
-    margin: 0 auto; /* center it */
+    display: block;
+    /* make sure it shows as a block element */
+    margin: 0 auto;
+    /* center it */
 }
+
 .testimonial-carousel .owl-dot.active span {
-    background-color: #fff;  /* active dot color */
+    background-color: #fff;
+    /* active dot color */
     border: 3px solid var(--color-yellow);
 }
 
-.testimonial-carousel .owl-stage-outer{
+.testimonial-carousel .owl-stage-outer {
     overflow: visible !important;
 }
 
@@ -1250,7 +1264,6 @@ ul {
 }
 
 .home-slider {
-    background: transparent;
     height: 100vh;
     position: relative;
     overflow: hidden;
@@ -1278,8 +1291,8 @@ ul {
 }
 
 .home-slider .tparrows.tp-leftarrow {
-    height: 80px;
-    width: 80px;
+    height: 40px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1296,7 +1309,7 @@ ul {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    background-size: 24px 16px;
+    background-size: 15px 15px;
     background-position: center;
 }
 
@@ -1305,8 +1318,8 @@ ul {
 }
 
 .home-slider .tparrows.tp-rightarrow {
-    height: 80px;
-    width: 80px;
+    height: 40px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1323,7 +1336,7 @@ ul {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    background-size: 24px 16px;
+    background-size: 15px 15px;
     background-position: center;
 }
 
@@ -1342,7 +1355,8 @@ ul {
     color: #fff;
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: center !important;
+    width: 100%;
     /* white-space: normal; */
 }
 
@@ -1453,6 +1467,7 @@ ul {
     text-decoration: none;
     transition: all 0.4s ease 0s;
 }
+
 .question-item-icon {
     text-align: center;
     margin-bottom: 20px;
@@ -1482,10 +1497,12 @@ ul {
     font-size: 14px;
     transition: all 0.4s;
 }
+
 .q-item-1,
-.q-item-2{
+.q-item-2 {
     border-right: 1px solid var(--color-yellow);
 }
+
 /**************************************
  * 05.About Section Style
  *************************************/
@@ -2021,6 +2038,30 @@ ul {
 }
 
 .service-area-image {}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* two columns */
+    grid-template-rows: repeat(2, 1fr);
+    /* two rows */
+    gap: 10px;
+    /* adjust spacing */
+    height: 300px;
+    /* or any height you want */
+}
+
+.tall {
+    grid-row: 1 / span 2;
+    /* take full height */
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 /**************************************
  * 09.Offer Section Style
@@ -2663,7 +2704,7 @@ lists__single__img__img.products__ {
 .nice-select .option.selected.focus {
     background-color: #f39c12;
     font-weight: 500;
-    font-family: "Helvetica Neue", sans-serif;
+    font-family: "Lato", sans-serif;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -2881,7 +2922,7 @@ lists__single__img__img.products__ {
     margin: 0 5px;
     font-size: 12px;
     line-height: 21px;
-    font-family: "Helvetica Neue", sans-serif;
+    font-family: "Lato", sans-serif;
     height: 30px;
     width: 30px;
     padding: 4px 11px;
@@ -3020,7 +3061,7 @@ lists__single__img__img.products__ {
     font-weight: 600;
     color: #f39c12;
     transition: all 0.6s cubic-bezier(0.76, 0, 0.24, 1);
-    font-family: "Helvetica Neue", sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 .project__img-slider__init__slider-wrapper__item-title__inner svg {
@@ -3277,8 +3318,18 @@ lists__single__img__img.products__ {
 .about-intro-counter {}
 
 .counter-single {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    width: 235px;
+    height: 235px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.06);
 }
+
 
 .counter-single h5 {
     font-size: 65px;
@@ -3289,10 +3340,39 @@ lists__single__img__img.products__ {
     margin-bottom: 15px;
 }
 
+.counter-single .ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 225px;
+    height: 235px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 50%;
+}
+
 .counter-single h6 {
     font-size: 18px;
     line-height: 28px;
     text-transform: uppercase;
+}
+
+.counter-single .tick {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    background-color: rgb(230, 230, 230);
+    border-radius: 50%;
+    top: 30px;
+    right: 0px;
+}
+
+.counter-single .tick i {
+    color: rgb(150, 147, 147);
+    font-size: 20px;
+    font-weight: 100;
 }
 
 /**************************************
@@ -4375,11 +4455,12 @@ input#timepicker:focus {
 }
 
 /* our benefits section styles */
-.item-row{
+.item-row {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
+
 .our_benifits_item {
     display: flex;
     align-items: center;
@@ -4387,7 +4468,8 @@ input#timepicker:focus {
     column-gap: 10px;
     max-width: 300px;
 }
-.our_benifits_item:hover .benifits_icon_container{
+
+.our_benifits_item:hover .benifits_icon_container {
     background-color: orange;
 }
 
@@ -4408,10 +4490,12 @@ input#timepicker:focus {
     flex-direction: column;
     justify-content: center;
 }
-.our_benifits_content.right{
+
+.our_benifits_content.right {
     align-items: flex-end;
 }
-.our_benifits_content.right .benifits_item_text{
+
+.our_benifits_content.right .benifits_item_text {
     text-align: right;
 }
 
@@ -4419,21 +4503,24 @@ input#timepicker:focus {
     font-size: 25px;
     color: #fff;
 }
-.our_benifits_content .benifits_item_title{
+
+.our_benifits_content .benifits_item_title {
     font-size: 23px;
     font-weight: 600;
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
-.our_benifits_content .benifits_item_title:hover{
+
+.our_benifits_content .benifits_item_title:hover {
     color: var(--color-yellow);
 }
-.our_benifits_content .benifits_item_text{
+
+.our_benifits_content .benifits_item_text {
     font-size: 12px;
 }
 
 /* choose your car section styles */
-.choose_your_car_card{
+.choose_your_car_card {
     height: 250px;
     color: #fff;
     padding: 40px 30px;
@@ -4443,16 +4530,19 @@ input#timepicker:focus {
     border-radius: 8px;
     transition: 0.3s ease-in-out;
 }
-.choose_your_car_card:hover{
+
+.choose_your_car_card:hover {
     background-color: var(--color-yellow);
 }
-.choose_your_car_card .card_icon_container{
-   color: #fff;
+
+.choose_your_car_card .card_icon_container {
+    color: #fff;
     position: absolute;
     top: -40px;
     background-color: var(--color-yellow);
     left: 50%;
-    transform: translateX(-50%); /* horizontally center */
+    transform: translateX(-50%);
+    /* horizontally center */
     height: 80px;
     width: 80px;
     border-radius: 50%;
@@ -4462,27 +4552,32 @@ input#timepicker:focus {
     align-items: center;
     justify-content: center;
 }
-.card_icon_container i{
+
+.card_icon_container i {
     font-size: 22px;
 }
-.choose_your_car_card .card_title{
+
+.choose_your_car_card .card_title {
     color: #fff;
     padding-top: 30px;
     padding-bottom: 15px;
     font-size: 20px;
     font-weight: 600;
 }
-.choose_your_car_card .card_des{
+
+.choose_your_car_card .card_des {
     line-height: 18px;
     font-size: 13px;
     padding-bottom: 10px;
 }
-.choose_your_car_card .card_price{
+
+.choose_your_car_card .card_price {
     font-size: 16px;
     color: var(--color-yellow);
     font-weight: 600;
 }
-.choose_your_car_card:hover .card_price{
+
+.choose_your_car_card:hover .card_price {
     color: #fff;
     transition: 0.3s ease-in-out;
 }

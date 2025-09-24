@@ -1,6 +1,54 @@
 <!-- Footer Section Start -->
 <footer class="footer">
-    <div class="footer-contents pt-100">
+    <div class="footer-contents pt-30">
+         <div class="container pb-30">
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInUp p-0 m-0" data-wow-delay="0.2s">
+                    <div class="question-item q-item-1">
+                        <div class="question-item-icon"> <i class="fa fa-map-marker" aria-hidden="true"></i>
+
+                        </div>
+                        <div class="question-item-info">
+                            <h6>Our address</h6>
+                            <p>
+                                1110 Belew Street , Irving Texas ,75061
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInUp p-0 m-0" data-wow-delay="0.2s">
+                    <div class="question-item q-item-2">
+                        <div class="question-item-icon"> <i class="fa fa-phone" aria-hidden="true"></i>
+
+                        </div>
+                        <div class="question-item-info">
+                            <h6>Our Phones</h6>
+                            <p>
+                                +1 (972) 415 5255
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 wow fadeInUp p-0 m-0" data-wow-delay="0.2s">
+                   <div class="question-item">
+                        <div class="question-item-icon"> <i class="fa fa-envelope-o" aria-hidden="true"></i>
+
+                        </div>
+                        <div class="question-item-info">
+                            <h6>Our Emails</h6>
+                            <p>
+                                <a href="info@dfwtaxiriders.com"> info@dfwtaxiriders.com</a> <br> rahman_pabel@yahoo.com
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
@@ -39,7 +87,7 @@
 
                             </li>
                             <li class="nav-item">
-                                <a href="mailto:info@fwtaxiriders.com" class="nav-link"><i class="fa fa-envelope"></i><span>info@dfwtaxiriders.com <br> rahman_pabel@yahoo.com</span></a>
+                                <a href="info@dfwtaxiriders.com" class="nav-link"><i class="fa fa-envelope"></i><span>info@dfwtaxiriders.com <br> rahman_pabel@yahoo.com</span></a>
                             </li>
                             <li class="nav-item">
                                 <a href="tel:+19724155255" class="nav-link"><i class="fa fa-phone"></i><span>+1 (972) 415-5255</span></a>
