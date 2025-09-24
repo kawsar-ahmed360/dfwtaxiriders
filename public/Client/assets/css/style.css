@@ -1264,7 +1264,6 @@ ul {
 }
 
 .home-slider {
-    background: transparent;
     height: 100vh;
     position: relative;
     overflow: hidden;
@@ -1292,8 +1291,8 @@ ul {
 }
 
 .home-slider .tparrows.tp-leftarrow {
-    height: 80px;
-    width: 80px;
+    height: 40px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1310,7 +1309,7 @@ ul {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    background-size: 24px 16px;
+    background-size: 15px 15px;
     background-position: center;
 }
 
@@ -1319,8 +1318,8 @@ ul {
 }
 
 .home-slider .tparrows.tp-rightarrow {
-    height: 80px;
-    width: 80px;
+    height: 40px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1337,7 +1336,7 @@ ul {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    background-size: 24px 16px;
+    background-size: 15px 15px;
     background-position: center;
 }
 
@@ -1350,13 +1349,14 @@ ul {
 }
 
 .home-slider .tp-caption h2 {
-    font-size: 45px;
+       font-size: 45px;
     line-height: 55px;
     font-weight: 700;
     color: #fff;
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: center !important;
+    width: 100%;
     /* white-space: normal; */
 }
 
