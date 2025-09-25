@@ -11,10 +11,10 @@
     <meta name='rating' content='General'>
     <meta name="revisit-after" content="30 days">
     <meta name="author" content="https://dfwblackcarlimollc.com"/>
-    <meta name="author" content="https://www.dfwblackcarlimollc.com"/>
+    <meta name="author" content="info@dfwtaxiriders.com"/>
 
-    <link rel=“canonical” href=“https://www.dfwblackcarlimollc.com” />
-    <link rel=“DfwBlackCarLimollc” href=“https://www.dfwblackcarlimollc.com” />
+    <link rel=“canonical” href=“info@dfwtaxiriders.com” />
+    <link rel=“DfwBlackCarLimollc” href=“info@dfwtaxiriders.com” />
 
 
 @section('content')
