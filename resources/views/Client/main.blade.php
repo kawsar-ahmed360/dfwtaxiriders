@@ -1081,9 +1081,9 @@
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="home-counter_image">
                     <a href="https://dfwblackcarlimollc.com">
-                        <img class="modify-img" data-image-small="{{asset('Client/assets/img/counter-car3.jpg')}}"
-                            data-image-large="{{asset('Client/assets/img/counter-car3.jpg')}}"
-                            data-image-standard="{{asset('Client/assets/img/counter-car3.jpg')}}" data-src=""
+                        <img class="modify-img" data-image-small="{{asset('Client/assets/img/home-images/1.jpg')}}"
+                            data-image-large="{{asset('Client/assets/img/home-images/1.jpg')}}"
+                            data-image-standard="{{asset('Client/assets/img/home-images/1.jpg')}}" data-src=""
                             src="{{asset('Client/assets/img/blur.jpg')}}" alt="" />
                     </a>
 
@@ -1092,9 +1092,9 @@
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="home-counter_image">
                     <a href="https://dfwblackcarlimollc.com">
-                        <img class="modify-img" data-image-small="{{asset('Client/assets/img/counter-car4.webp')}}"
-                            data-image-large="{{asset('Client/assets/img/counter-car4.webp')}}"
-                            data-image-standard="{{asset('Client/assets/img/counter-car4.webp')}}" data-src=""
+                        <img class="modify-img" data-image-small="{{asset('Client/assets/img/home-images/2.jpg')}}"
+                            data-image-large="{{asset('Client/assets/img/home-images/2.jpg')}}"
+                            data-image-standard="{{asset('Client/assets/img/home-images/2.jpg')}}" data-src=""
                             src="{{asset('Client/assets/img/blur.jpg')}}" alt="" />
                     </a>
 
@@ -1117,9 +1117,9 @@
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="home-counter_image">
                         <a href="https://dfwblackcarlimollc.com">
-                            <img class="modify-img" data-image-small="{{asset('Client/assets/img/counter-car1.jpg')}}"
-                                data-image-large="{{asset('Client/assets/img/counter-car1.jpg')}}"
-                                data-image-standard="{{asset('Client/assets/img/counter-car1.jpg')}}" data-src=""
+                            <img class="modify-img" data-image-small="{{asset('Client/assets/img/home-images/3.jpg')}}"
+                                data-image-large="{{asset('Client/assets/img/home-images/3.jpg')}}"
+                                data-image-standard="{{asset('Client/assets/img/home-images/3.jpg')}}" data-src=""
                                 src="{{asset('Client/assets/img/blur.jpg')}}" alt="" />
                         </a>
                     </div>
@@ -1127,9 +1127,9 @@
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="home-counter_image">
                         <a href="https://dfwblackcarlimollc.com">
-                            <img class="modify-img" data-image-small="{{asset('Client/assets/img/counter-car2.jpg')}}"
-                                data-image-large="{{asset('Client/assets/img/counter-car2.jpg')}}"
-                                data-image-standard="{{asset('Client/assets/img/counter-car2.jpg')}}" data-src=""
+                            <img class="modify-img" data-image-small="{{asset('Client/assets/img/home-images/4.jpg')}}"
+                                data-image-large="{{asset('Client/assets/img/home-images/4.jpg')}}"
+                                data-image-standard="{{asset('Client/assets/img/home-images/4.jpg')}}" data-src=""
                                 src="{{asset('Client/assets/img/blur.jpg')}}" alt="" />
                         </a>
                     </div>
