@@ -120,7 +120,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
   <tr>
     <td style="padding-right: 0px;padding-left: 0px;" align="center">
       <a href="https://www.dfwblackcarlimollc.com" target="_blank">
-      <img align="center" border="0" src="{{asset('images/image-6.jpeg')}}" alt="DFW Taxi Riders" title="DFW Taxi Riders" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 580px;" width="580" class="v-src-width v-src-max-width"/>
+      <img align="center" border="0" src="{{asset('images/email_img.jpg')}}" alt="DFW Taxi Riders" title="DFW Taxi Riders" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 580px;" width="580" class="v-src-width v-src-max-width"/>
       </a>
     </td>
   </tr>
@@ -479,7 +479,7 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
       <td class="v-container-padding-padding" style="overflow-wrap:break-word;word-break:break-word;padding:20px 20px 15px;font-family:'Open Sans',sans-serif;" align="left">
         
   <div style="font-size: 14px; color: #333333; line-height: 160%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 16px; line-height: 25.6px; font-family: Lato, sans-serif;">Please, consider this as an acceptance email. If you have any questions contact us with this link : <a rel="noopener" href="dfwblackcarlimollc@gmail.com" target="_blank">dfwblackcarlimollc@gmail.com</a>  OR<a rel="noopener" href="info@dfwblackcarlimollc.com" target="_blank"> info@dfwblackcarlimollc.com</a></span></p>
+    <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 16px; line-height: 25.6px; font-family: Lato, sans-serif;">Please, consider this as an acceptance email. If you have any questions contact us with this link : <a rel="noopener" href="info@dfwtaxiriders.com" target="_blank">info@dfwtaxiriders.com</a>  OR<a rel="noopener" href="info@dfwtaxiriders.com" target="_blank"> info@dfwtaxiriders.com</a></span></p>
   </div>
 
       </td>
