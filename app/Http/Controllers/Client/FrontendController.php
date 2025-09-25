@@ -28,6 +28,7 @@ class FrontendController extends Controller
 
         $data['vehicle'] = VehicleManage::get();
         $data['testimonial'] = Testimonial::get();
+        $data['blog'] = BlogManage::get();
         return view('Client.main', $data);
     }
 
@@ -195,7 +196,7 @@ class FrontendController extends Controller
             'nam' => $request->name,
             'l_nam' => $request->l_name,
             'ema' => $request->email,
-            'ad_ema' => 'dfwblackcarlimollc@gmail.com',
+            'ad_ema' => 'website@dfwtaxiriders.com',
             'ph' => $request->phone,
             'mess' => $request->message,
         );
@@ -204,7 +205,7 @@ class FrontendController extends Controller
 
         Mail::send('mail/mail_send', $data, function ($message) use ($data) {
             $message->from($data['ad_ema'], 'Admin');
-            $message->to('no-reply@dfwblackcarlimollc.com', 'Admin');
+            $message->to('info@dfwtaxiriders.com', 'Admin');
             $message->subject('Contact Mail');
         });
     }
@@ -342,7 +343,7 @@ public function generateUniqueRegId(): string
     public function SendMailAttachPdf(Request $request, $identifier)
     {
 
-        $data['link_gen'] = 'https://dfwblackcarlimollc.com/pdf-view/' . $identifier;
+        $data['link_gen'] = 'https://dfwtaxiriders.com/pdf-view/' . $identifier;
 
         $data["email"] = $request->email;
         $data["iden"] = $identifier;
@@ -353,8 +354,8 @@ public function generateUniqueRegId(): string
 
 
         Mail::send('emails.myTestMail', $data, function ($message) use ($data) {
-            $message->from('dfwblackcarlimollc@gmail.com', 'Admin');
-            $recipients = [$data['email'], 'no-reply@dfwblackcarlimollc.com'];
+            $message->from('website@dfwtaxiriders.com', 'Admin');
+            $recipients = [$data['email'], 'no-reply@dfwtaxiriders.com'];
             $message->to($recipients, 'Dear Customer');
             $message->subject($data["title"]);
             // $message->attachData($pdf->output(), "text.pdf");

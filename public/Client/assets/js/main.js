@@ -362,9 +362,9 @@
            $('#total_hours_count_two').text(`${hours_Text}Hr`);
 
          // Update the booking summary total price $160 / Hr (Min. 3hr)
-         $(".selected-vehicle span:last-child").text(`$${vehiclePrice} / Hr (Min. 3hr)`);
+         $(".selected-vehicle span:last-child").text(`$${vehiclePrice} / Hr`);
          // console.log(hours_price_cal);
-         $(".total-price span:last-child").text(`$${vehiclePrice} / Hr (Min. 3hr)`);
+         $(".total-price span:last-child").text(`$${vehiclePrice} / ${hours_Text}Hr`);
 
          // Calculate and update the 30% deposit
          var deposit = (parseFloat(vehiclePrice) * 0.3).toFixed(2);

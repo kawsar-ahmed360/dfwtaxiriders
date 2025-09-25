@@ -124,8 +124,7 @@
                                             </span>
                                             {{-- <input type="text" class="form--control timepicker hours_cal_pickup_time"
                                                 name="pickup_time" id="pickup_time" placeholder="Pickup Time" required /> --}}
-                                            <select class="Select form--control hours_cal_pickup_time" name="pickup_time"
-                                                id="pickup_time" required>
+                                            <select class="Select form--control hours_cal_pickup_time" name="pickup_time" id="pickup_time" required>
                                                 <option value="">Pickup Time</option>
                                             </select>
                                         </div>
@@ -149,8 +148,7 @@
                                                 name="drowp_time" id="drowp_time" placeholder="Drop Off Time" required />
                                                  --}}
 
-                                            <select class="Select form--control hours_cal_drop_time" name="drowp_time"
-                                                id="drowp_time" required>
+                                                 <select class="Select form--control hours_cal_drop_time" name="drowp_time" id="drowp_time" required>
                                                 <option value="">Drop Time</option>
                                             </select>
                                         </div>
@@ -247,7 +245,12 @@
                                                     <span>Total</span>
                                                     <span id=""></span>
                                                 </div>
-                                                
+                                                <!--<div class="to-pay">-->
+                                                <!--    <span>To Pay-->
+                                                <!--        <p>(30% deposit)</p>-->
+                                                <!--    </span>-->
+                                                <!--    <span>$91.77</span>-->
+                                                <!--</div>-->
                                             </div>
 
                                         </div>
@@ -310,42 +313,34 @@
                                         <div class="vehicle-list mt-50" id="vehicleListContainer">
 
                                             @foreach (@$vehicle as $key => $v)
-                                                <div class="row vehicle-list_single vehicle-card">
+                                                <div class="row vehicle-list_single">
                                                     <div class="col-lg-4 col-md-3 col-sm-12">
                                                         <div class="vehicle-list-single_image">
                                                             <img class="modify-img"
                                                                 data-image-small="{{ @$v->image ? url('upload/Vehicle/' . @$v->image) : '' }}"
+                                                                data-image-large="{{ @$v->image ? url('upload/Vehicle/' . @$v->image) : '' }}"
+                                                                data-image-standard="{{ @$v->image ? url('upload/Vehicle/' . @$v->image) : '' }}"
+                                                                data-src="{{ @$v->image ? url('upload/Vehicle/' . @$v->image) : '' }}"
                                                                 src="{{ @$v->image ? url('upload/Vehicle/' . @$v->image) : '' }}"
                                                                 alt="" />
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-8 col-md-9 col-sm-12">
-                                                        <div class="vehicle-list-single_details"
-                                                            data-vehicle-id="{{ $v->id }}">
+                                                        <div class="vehicle-list-single_details">
                                                             <div class="vehicle-title-select">
                                                                 <h4>{{ @$v->title }}</h4>
-                                                                <a href="#" class="button select-vehicle"
-                                                                    data-id="{{ $v->id }}"
-                                                                    data-title="{{ $v->title }}"
-                                                                    data-hourly="{{ $v->rate }}"
-                                                                    data-flat="{{ $v->flat_rate_10_miles }}">
-                                                                    Select
-                                                                </a>
+                                                                <a href="#"
+                                                                    onclick="SelectCar({{ $v->id }},'{{ $v->title }}', '{{ $v->rate }}')"
+                                                                    class="button">Select</a>
                                                             </div>
 
-                                                            <h3 class="vehicle-price hourly-rate"
-                                                                id="hourly_rate_{{ $v->id }}">
-                                                                {{ $v->rate }}
-                                                            </h3>
 
-                                                            <h3 class="vehicle-price flat-rate"
-                                                                id="flat_rate_{{ $v->id }}"
-                                                                style="display: none;">
-                                                                {{ $v->flat_rate_10_miles }} / 10 miles
-                                                            </h3>
 
+                                                            <h3 class="vehicle-price">{{ $v->rate }}</h3>
                                                             <div class="vehicle-details">
-                                                                <p>{!! @$v->description !!}</p>
+                                                                <p>
+                                                                    {!! @$v->description !!}
+                                                                </p>
                                                                 <p class="strong">Rate: {{ $v->rate }}</p>
 
                                                                 <div class="table-responsive">
@@ -373,32 +368,79 @@
                                                                         <tbody>
                                                                             <tr>
                                                                                 <th class="color-text">Price</th>
-                                                                                <td>{{ @$v->flat_rate_10_miles }}</td>
-                                                                                <td>{{ @$v->flat_rate_20_miles }}</td>
-                                                                                <td>{{ @$v->flat_rate_30_miles }}</td>
-                                                                                <td>{{ @$v->flat_rate_40_miles }}</td>
+                                                                                <td scope="row">
+                                                                                    {{ @$v->flat_rate_10_miles }}</td>
+                                                                                <td scope="row">
+                                                                                    {{ @$v->flat_rate_20_miles }}</td>
+                                                                                <td scope="row">
+                                                                                    {{ @$v->flat_rate_30_miles }}</td>
+                                                                                <td scope="row">
+                                                                                    {{ @$v->flat_rate_40_miles }}</td>
                                                                             </tr>
                                                                         </tbody>
                                                                     </table>
                                                                 </div>
+                                                                {{-- <div class="vehicle-details_table">
+                                                                <div class="vehicle-details_table_left">
+                                                                    <div class="vehicle-details_text">
+                                                                        <span>ENGINE</span>
+                                                                        <h6>3000</h6>
+                                                                    </div>
+                                                                    <div class="vehicle-details_text">
+                                                                        <span>INTERIOR COLOR</span>
+                                                                        <h6>Black</h6>
+                                                                    </div>
+                                                                    <div class="vehicle-details_text">
+                                                                        <span>POWER</span>
+                                                                        <h6>285</h6>
+                                                                    </div>
+                                                                    <div class="vehicle-details_text">
+                                                                        <span>FUEL TYPE</span>
+                                                                        <h6>Diesel</h6>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="vehicle-details_table_right">
+                                                                    <div class="vehicle-details_text">
+                                                                        <span>LENGTH</span>
+                                                                        <h6>5.1 meters</h6>
+                                                                    </div>
+                                                                    <div class="vehicle-details_text">
+                                                                        <span>EXTERIOR COLOR</span>
+                                                                        <h6>Silver</h6>
+                                                                    </div>
+                                                                    <div class="vehicle-details_text">
+                                                                        <span>TRANSMISSION</span>
+                                                                        <h6>Manual</h6>
+                                                                    </div>
+                                                                    <div class="vehicle-details_text">
+                                                                        <span>EXTRAS</span>
+                                                                        <h6>
+                                                                            Leather Seats,
+                                                                            <br />
+                                                                            LED Lighting,
+                                                                            <br />
+                                                                            Radio
+                                                                        </h6>
+                                                                    </div>
+                                                                </div>
+                                                            </div> --}}
                                                             </div>
-
                                                             <div class="more-info">
                                                                 <a href="#" class="more-info_btn">
-                                                                    <i class="fa ti-angle-down"></i><span>More Info</span>
+                                                                    <i class="fa ti-angle-down"></i>
+                                                                    <span>More Info</span>
                                                                 </a>
                                                                 <div class="more-info_icons">
                                                                     <div class="more-info_icons_inner">
-                                                                        <i
-                                                                            class="fa ti-user"></i><span>{{ @$v->bag_capacity }}</span>
+                                                                        <i class="fa ti-user"></i>
+                                                                        <span>{{ @$v->bag_capacity }}</span>
                                                                     </div>
                                                                     <div class="more-info_icons_inner">
-                                                                        <i
-                                                                            class="fa ti-briefcase"></i><span>{{ @$v->passengers }}</span>
+                                                                        <i class="fa ti-briefcase"></i>
+                                                                        <span>{{ @$v->passengers }}</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -702,191 +744,332 @@
 
 
 @section('footer')
-  <script>
-$(document).ready(function () {
-    function updateRateDisplay() {
-        var selectedType = $('#trip_type').val();
-        $('.vehicle-list_single').each(function () {
-            var vehicleId = $(this).find('.vehicle-list-single_details').data('vehicle-id');
-            if (!vehicleId) return;
+    <script>
+        $('#trip_type').on('change', function() {
+            var tripe_type = $('#trip_type').val();
+            $('#trip_type_text').text(tripe_type);
+            $('#trip_type_text_second').text(tripe_type);
+        })
 
-            if (selectedType === 'Flat Rate') {
-                $('#flat_rate_' + vehicleId).show();
-                $('#hourly_rate_' + vehicleId).hide();
-            } else {
-                $('#flat_rate_' + vehicleId).hide();
-                $('#hourly_rate_' + vehicleId).show();
-            }
+        $('#pickupLocation').on('keyup', function() {
+            var pickupLocation_text = $('#pickupLocation').val();
+            $('#pickup_address_text').text(pickupLocation_text);
+            $('#pickup_address_text_second').text(pickupLocation_text);
+        })
+
+        $('#dropLocation').on('keyup', function() {
+            var dropLocation_text = $('#dropLocation').val();
+            $('#drowp_address_text').text(dropLocation_text);
+            $('#drowp_address_text_second').text(dropLocation_text);
+        })
+
+
+        $('#pickup_date').on('change', function() {
+            var pickup_date_texts = $('#pickup_date').val();
+            $('#pickup_date_text').text(pickup_date_texts);
+            $('#pickup_date_text_second').text(pickup_date_texts);
+        })
+
+        $('#pickup_time').on('change blur', function() {
+            var pickup_time_texts = $('#pickup_time').val();
+            // alert(pickup_time_texts);
+            $('#pickup_time_text').text(pickup_time_texts);
+            $('#pickup_time_text_second').text(pickup_time_texts);
+
+        })
+
+
+        $('#drowp_date').on('change', function() {
+            var drowp_date_texts = $('#drowp_date').val();
+            $('#drop_date_text').text(drowp_date_texts);
+            $('#drop_date_text_second').text(drowp_date_texts);
+        })
+
+        $('#drowp_time').on('change blur', function() {
+            var drowp_time_texts = $('#drowp_time').val();
+            $('#drop_time_text').text(drowp_time_texts);
+            $('#drop_time_text_second').text(drowp_time_texts);
+        })
+
+
+        $('#total_passengers').on('change', function() {
+            var total_passengers_texts = $('#total_passengers').val();
+            $('#total_passanger_text').text(total_passengers_texts);
+            $('#total_passanger_text_second').text(total_passengers_texts);
+        })
+
+
+
+
+        $('#luggage').on('change', function() {
+            var total_luggages_texts = $('#luggage').val();
+            $('#total_luggages_text').text(total_luggages_texts);
+            $('#total_luggages_text_second').text(total_luggages_texts);
+        })
+
+
+        function SelectCar(carId, title, rate) {
+            var numericRate = extractNumeric(rate);
+            $('#vehicle_id').val(carId);
+            $('#total_amount_final').val(numericRate);
+            // $('#selecte_vehicle_total').text('$'+numericRate);
+
+
+            // alert(numericRate);
+            $('#vehicle_title_Texts').text(title);
+            $('#vehicle_title_Texts_second').text(title);
+
+        }
+
+        function extractNumeric(text) {
+            var numericValue = parseFloat(text.split('/')[0].replace(/[^0-9\.]/g, ""));
+            return isNaN(numericValue) ? 0 : numericValue;
+        }
+
+        function PyamentMethod(value) {
+
+            $('#payments').val(value);
+        }
+    </script>
+
+
+    <script>
+        $("#coupon_applay").click(function() {
+            // Get the value of the coupon_name input field
+            var couponName = $("input[name=coupon_name]").val();
+
+            // Perform AJAX call
+            $.ajax({
+                url: "{{ route('CouponApplaySumit') }}", // Replace with the actual URL of the route
+                method: "GET", // Use the appropriate HTTP method (POST or GET)
+                data: {
+                    coupon_name: couponName
+                }, // Send coupon_name value in the request
+                success: function(response) {
+                    // Handle the response from the server
+
+                    if (response.message == 'Coupon successfully validated') {
+
+                        $('#coupon_applay').hide();
+                        $('#coupon_done').show();
+                        $('#coupon_field').attr('readonly', 'readonly');
+                        $('#coupon_id').val(response.coupon.id);
+                        $('.total-coupon').show();
+                        $('#coupon_code').text(response.coupon.coupon_code);
+
+                        var price_Textm = $('#total_amount_final').val();
+                        var hours_Texmt = $('#total_hours_distance').val();
+                        var vehiclePricem = price_Textm * hours_Texmt;
+                        var final_amount = vehiclePricem - response.coupon.discount_amount;
+                        $(".total-price span:last-child").text(`$${final_amount} / Hr (Min. 3hr)`);
+
+                        // console.log(response.coupon);
+                        // console.log('yes')
+                    }
+                    // console.log("AJAX request successful:", response.message);
+                    // You can update the UI or perform any other actions based on the response
+                },
+                error: function(xhr, status, error) {
+                    // Handle any errors that occur during the AJAX request
+                    console.error("AJAX request error:", status, error);
+                }
+            });
         });
-    }
+    </script>
 
-    $('#trip_type').on('change', function () {
-        updateRateDisplay();
-    });
 
-    $('.select-vehicle').on('click', function (e) {
-        e.preventDefault();
+    <!-- <script>
+        $('.hours_cal_pickup_time, .hours_cal_drop_time').on('change', function() {
 
-        var selectedType = $('#trip_type').val();
-        if (!selectedType) {
-            alert("Please select a trip type first.");
-            return;
-        }
+            var hourse_pickup_time = $('.hours_cal_pickup_time').val();
+            var hourse_cal_drop_time = $('.hours_cal_drop_time').val();
 
-        var carId = $(this).data('id');
-        var title = $(this).data('title');
-        var rate = selectedType === 'Flat Rate' ? $(this).data('flat') : $(this).data('hourly');
+            console.log(hourse_pickup_time);
+            console.log(hourse_cal_drop_time);
+        })
+    </script> -->
 
-        SelectCar(carId, title, rate);
-        updateSummary(); // <-- Fixes first click issue
-    });
-
-    function updateSummary() {
-        var hours = parseFloat($('#total_hours_distance').val());
-        var price = parseFloat($('#total_amount_final').val());
-        var title = $('#vehicle_title_Texts').text();
-
-        if (!isNaN(hours)) {
-            $('#total_hours_count').text(hours.toFixed(2) + " Hr");
-        }
-
-        if (title) {
-            $('#selecte_vehicle_total').text(title);
-        }
-
-        if (!isNaN(hours) && !isNaN(price)) {
-            var total = (price * hours).toFixed(2);
-            $('.total-price span:last-child').text("$" + total);
-        }
-    }
-
-    // Date & Time Calculation (fix 1:30 issue)
-    $('.hours_cal_pickup_time, .hours_cal_drop_time, .hours_cal_pickup_date, .hours_cal_drop_date')
-        .on('change blur', function () {
-            var pickupDate = $('.hours_cal_pickup_date').val();
+    <!-- <script>
+        $('.hours_cal_pickup_time, .hours_cal_drop_time').on('blur', function() {
             var pickupTime = $('.hours_cal_pickup_time').val();
-            var dropDate = $('.hours_cal_drop_date').val();
             var dropTime = $('.hours_cal_drop_time').val();
 
-            if (!pickupDate || !pickupTime || !dropDate || !dropTime) {
-                $('#total_hours_distance').val('');
-                $('.hours_show').hide();
-                return;
-            }
+            if (pickupTime && dropTime) {
+                var pickupDateTime = parseTime(pickupTime);
+                var dropDateTime = parseTime(dropTime);
 
-            var pickupDT = parseDateTime24(pickupDate, pickupTime);
-            var dropDT = parseDateTime24(dropDate, dropTime);
+                var timeDifference = dropDateTime - pickupDateTime;
 
-            if (dropDT <= pickupDT) {
-                alert("Drop must be after pickup.");
-                $('#total_hours_distance').val('');
-                $('.hours_show').hide();
-                return;
-            }
+                if (!isNaN(timeDifference)) {
+                    var hours = Math.floor(timeDifference / (1000 * 60 * 60));
+                    var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
 
-            var diffMillis = dropDT - pickupDT;
-            var hours = diffMillis / (1000 * 60 * 60); // decimal
+                    // $('#result').text(`Time Duration: ${hours} hours and ${minutes} minutes`);
+                    // $('#total_hours_distance').val(`${hours}`);
 
-            if (hours >= 0.5) {
-                $('#total_hours_distance').val(hours.toFixed(2));
-                $('.hours_show').show();
-                updateSummary(); // live update
-            } else {
-                $('#total_hours_distance').val('');
-                $('.hours_show').hide();
-                alert("Duration must be at least 30 minutes.");
-            }
-        });
+                    if (!isNaN(timeDifference) && hours >= 3) {
+                        // var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                        // $('#result').text(`Time Duration: ${hours} hours and ${minutes} minutes`);
+                        $('#total_hours_distance').val(`${hours}`);
 
-    // Update pickup/drop details
-    $('#pickupLocation').on('keyup', function () {
-        var text = $(this).val();
-        $('#pickup_address_text, #pickup_address_text_second').text(text);
-    });
-    $('#dropLocation').on('keyup', function () {
-        var text = $(this).val();
-        $('#drowp_address_text, #drowp_address_text_second').text(text);
-    });
-    $('#pickup_date').on('change', function () {
-        var text = $(this).val();
-        $('#pickup_date_text, #pickup_date_text_second').text(text);
-    });
-    $('#pickup_time').on('change blur', function () {
-        var text = $(this).val();
-        $('#pickup_time_text, #pickup_time_text_second').text(text);
-    });
-    $('#drowp_date').on('change', function () {
-        var text = $(this).val();
-        $('#drop_date_text, #drop_date_text_second').text(text);
-    });
-    $('#drowp_time').on('change blur', function () {
-        var text = $(this).val();
-        $('#drop_time_text, #drop_time_text_second').text(text);
-    });
-    $('#total_passengers').on('change', function () {
-        var text = $(this).val();
-        $('#total_passanger_text, #total_passanger_text_second').text(text);
-    });
-    $('#luggage').on('change', function () {
-        var text = $(this).val();
-        $('#total_luggages_text, #total_luggages_text_second').text(text);
-    });
+                        $('.hours_show').css({
+                            "display": "block"
+                        });
 
-    $('#coupon_applay').on('click', function () {
-        var couponName = $("input[name=coupon_name]").val();
+                    } else {
+                        $('#result').text('');
+                        $('.hours_show').css({
+                            "display": "none"
+                        });
 
-        $.ajax({
-            url: "{{ route('CouponApplaySumit') }}",
-            method: "GET",
-            data: { coupon_name: couponName },
-            success: function (response) {
-                if (response.message === 'Coupon successfully validated') {
-                    $('#coupon_applay').hide();
-                    $('#coupon_done').show();
-                    $('#coupon_field').prop('readonly', true);
-                    $('#coupon_id').val(response.coupon.id);
-                    $('.total-coupon').show();
-                    $('#coupon_code').text(response.coupon.coupon_code);
 
-                    var price = parseFloat($('#total_amount_final').val());
-                    var hours = parseFloat($('#total_hours_distance').val());
-                    var total = price * hours;
-                    var finalAmount = total - response.coupon.discount_amount;
+                        alert("Invalid input: The time duration must be at least 3 hours.");
+                    }
 
-                    $(".total-price span:last-child").text(`$${finalAmount.toFixed(2)} / Hr`);
+
+
+                } else {
+                    $('#result').text('Invalid input');
                 }
-            },
-            error: function (xhr, status, error) {
-                console.error("AJAX request error:", status, error);
+            } else {
+                $('#result').text('');
             }
         });
-    });
-});
 
-// Helper function
-function parseDateTime24(dateStr, timeStr) {
-    // Format: MM/DD/YYYY and HH:mm
-    const [month, day, year] = dateStr.split('/').map(Number);
-    const [hour, minute] = timeStr.split(':').map(Number);
-    return new Date(year, month - 1, day, hour, minute);
-}
+        function parseTime(timeString) {
+            var parts = timeString.split(':');
+            var hours = parseInt(parts[0]);
+            var minutes = parseInt(parts[1]);
 
-function SelectCar(carId, title, rate) {
-    const numericRate = extractNumeric(rate);
-    $('#vehicle_id').val(carId);
-    $('#total_amount_final').val(numericRate);
-    $('#vehicle_title_Texts, #vehicle_title_Texts_second').text(title);
-}
+            if (timeString.indexOf('pm') !== -1 && hours !== 12) {
+                hours += 12;
+            } else if (timeString.indexOf('am') !== -1 && hours === 12) {
+                hours = 0;
+            }
 
-function extractNumeric(text) {
-    return parseFloat(text.toString().split('/')[0].replace(/[^0-9.]/g, "")) || 0;
-}
+            var currentDate = new Date();
+            return new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), hours, minutes);
+        }
+    </script> -->
 
-function PyamentMethod(value) {
-    $('#payments').val(value);
-}
-</script>
+    <script>
+        //   $('.hours_cal_pickup_time, .hours_cal_drop_time, .hours_cal_pickup_date, .hours_cal_drop_date').on('change blur', function () {
+        //     var pickupDate = $('.hours_cal_pickup_date').val();
+        //     var pickupTime = $('.hours_cal_pickup_time').val();
+        //     var dropDate = $('.hours_cal_drop_date').val();
+        //     var dropTime = $('.hours_cal_drop_time').val();
 
+        //     if (!pickupDate || !pickupTime || !dropDate || !dropTime) {
+        //       $('#result').text('');
+        //       return; // Don't proceed if any field is empty
+        //     }
+
+        //     var pickupDateTime = parseDateTime(pickupDate, pickupTime);
+        //     var dropDateTime = parseDateTime(dropDate, dropTime);
+
+        //     var timeDifference = dropDateTime - pickupDateTime;
+        //     var totalMilliseconds = Math.abs(timeDifference);
+
+        //     var hours = Math.floor(totalMilliseconds / (1000 * 60 * 60));
+        //     var minutes = Math.floor((totalMilliseconds % (1000 * 60 * 60)) / (1000 * 60));
+
+        //     if (!isNaN(timeDifference) && hours >= 3) {
+        //         // var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        //         // $('#result').text(`Time Duration: ${hours} hours and ${minutes} minutes`);
+        //         $('#total_hours_distance').val(`${hours}`);
+
+
+        //         $('.hours_show').css({
+        //              "display":"block"
+        //          });
+
+        //       } else {
+        //         $('#result').text('');
+        //         $('.hours_show').css({
+        //              "display":"none"
+        //          });
+
+
+        //         alert("Invalid input: The time duration must be at least 3 hours.");
+        //       }
+
+
+
+
+        //   });
+
+        //   function parseDateTime(dateString, timeString) {
+        //     var dateParts = dateString.split('/');
+        //     var day = parseInt(dateParts[0]);
+        //     var month = parseInt(dateParts[1]) - 1; 
+        //     var year = parseInt(dateParts[2]);
+
+        //     var timeParts = timeString.split(':');
+        //     var hours = parseInt(timeParts[0]);
+        //     var minutes = parseInt(timeParts[1]);
+
+        //     if (timeString.indexOf('pm') !== -1 && hours !== 12) {
+        //       hours += 12;
+        //     } else if (timeString.indexOf('am') !== -1 && hours === 12) {
+        //       hours = 0;
+        //     }
+
+        //     return new Date(year, month, day, hours, minutes);
+        //   }
+
+
+        $('.hours_cal_pickup_time, .hours_cal_drop_time, .hours_cal_pickup_date, .hours_cal_drop_date')
+            .on('change blur', function() {
+                var pickupDate = $('.hours_cal_pickup_date').val(); // e.g. "08/01/2025"
+                var pickupTime = $('.hours_cal_pickup_time').val(); // e.g. "12:00:00 pm"
+                var dropDate = $('.hours_cal_drop_date').val(); // e.g. "08/02/2025"
+                var dropTime = $('.hours_cal_drop_time').val(); // e.g. "12:00:00 pm"
+
+                if (!pickupDate || !pickupTime || !dropDate || !dropTime) {
+                    $('#result').text('');
+                    return;
+                }
+
+                var pickupDT = parseMDYDateTime(pickupDate, pickupTime);
+                var dropDT = parseMDYDateTime(dropDate, dropTime);
+
+                if (dropDT <= pickupDT) {
+                    alert("Drop must be after pickup.");
+                    $('#total_hours_distance').val('');
+                    $('.hours_show').hide();
+                    return;
+                }
+
+                var diffMillis = dropDT - pickupDT;
+                var hours = Math.floor(diffMillis / (1000 * 60 * 60));
+
+                if (hours >= 3) {
+                    $('#total_hours_distance').val(hours);
+                    $('.hours_show').show();
+                } else {
+                    $('#total_hours_distance').val('');
+                    $('.hours_show').hide();
+                    alert("Invalid input: duration must be at least 3 hours.");
+                }
+            });
+
+        // Parse input as MM/DD/YYYY + "hh:mm:ss am/pm" format
+        function parseMDYDateTime(dateString, timeString) {
+            var [month, day, year] = dateString.split('/').map(part => parseInt(part, 10));
+
+            var timeParts = timeString.trim().toLowerCase().split(/[:\s]/);
+            var hours = parseInt(timeParts[0], 10);
+            var minutes = parseInt(timeParts[1], 10);
+            // Skip seconds if needed:
+            // var seconds = parseInt(timeParts[2], 10); // if present
+            var ampm = timeParts[3]; // 'am' or 'pm'
+
+            if (ampm === 'pm' && hours !== 12) hours += 12;
+            else if (ampm === 'am' && hours === 12) hours = 0;
+
+            return new Date(year, month - 1, day, hours, minutes /*, seconds if used */ );
+        }
+    </script>
 
     @if (Session::has('toastr'))
         <script src="https://cdn.jsdelivr.net/npm/toastr@2"></script>
@@ -946,56 +1129,59 @@ function PyamentMethod(value) {
     </script>
 
 
-    <script>
-        $(document).ready(function() {
-            const $timeSelect = $('.hours_cal_pickup_time');
+<script>
+$(document).ready(function () {
+  const $timeSelect = $('.hours_cal_pickup_time');
 
-            // Clear existing options except placeholder
-            $timeSelect.find('option:not(:first)').remove();
+  // Clear existing options except placeholder
+  $timeSelect.find('option:not(:first)').remove();
 
-            // Generate 01:00 to 23:30 with 30-min intervals
-            for (let hour = 1; hour < 24; hour++) {
-                for (let minute = 0; minute < 60; minute += 30) {
-                    const h = hour.toString().padStart(2, '0');
-                    const m = minute.toString().padStart(2, '0');
-                    const time = `${h}:${m}`;
-                    $timeSelect.append(`<option value="${time}">${time}</option>`);
-                }
-            }
+  // Generate 01:00 to 23:30 with 30-min intervals
+  for (let hour = 1; hour < 24; hour++) {
+    for (let minute = 0; minute < 60; minute += 30) {
+      const h = hour.toString().padStart(2, '0');
+      const m = minute.toString().padStart(2, '0');
+      const time = `${h}:${m}`;
+      $timeSelect.append(`<option value="${time}">${time}</option>`);
+    }
+  }
 
-            // Re-initialize niceSelect (if using it)
-            if ($.fn.niceSelect) {
-                $timeSelect.niceSelect('destroy');
-                $timeSelect.niceSelect();
-            }
-        });
-    </script>
+  // Re-initialize niceSelect (if using it)
+  if ($.fn.niceSelect) {
+    $timeSelect.niceSelect('destroy');
+    $timeSelect.niceSelect();
+  }
+});
+</script>
 
 
-    <script>
-        $(document).ready(function() {
-            const $timeSelect = $('.hours_cal_drop_time');
+<script>
+$(document).ready(function () {
+  const $timeSelect = $('.hours_cal_pickup_time');
 
-            // Clear existing options except placeholder
-            $timeSelect.find('option:not(:first)').remove();
+  // Clear existing options except placeholder
+  $timeSelect.find('option:not(:first)').remove();
 
-            // Generate 01:00 to 23:30 with 30-min intervals
-            for (let hour = 1; hour < 24; hour++) {
-                for (let minute = 0; minute < 60; minute += 30) {
-                    const h = hour.toString().padStart(2, '0');
-                    const m = minute.toString().padStart(2, '0');
-                    const time = `${h}:${m}`;
-                    $timeSelect.append(`<option value="${time}">${time}</option>`);
-                }
-            }
+  // Generate 01:00 to 23:30 with 30-min intervals
+  for (let hour = 1; hour < 24; hour++) {
+    for (let minute = 0; minute < 60; minute += 30) {
+      const h = hour.toString().padStart(2, '0');
+      const m = minute.toString().padStart(2, '0');
+      const time = `${h}:${m}`;
+      $timeSelect.append(`<option value="${time}">${time}</option>`);
+    }
+  }
 
-            // Re-initialize niceSelect (if using it)
-            if ($.fn.niceSelect) {
-                $timeSelect.niceSelect('destroy');
-                $timeSelect.niceSelect();
-            }
-        });
-    </script>
+  // Re-initialize niceSelect (if using it)
+  if ($.fn.niceSelect) {
+    $timeSelect.niceSelect('destroy');
+    $timeSelect.niceSelect();
+  }
+});
+</script>
+
+
+
 @endsection
 
 @endsection
