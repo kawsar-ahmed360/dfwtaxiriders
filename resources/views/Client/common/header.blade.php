@@ -10,7 +10,7 @@
                </div>
             </div> --}}
             <div class="header-top-social-info">
-               <a href="#"><i class="fa fa-map-marker"></i>	<span>1110 Belew Street , Irving Texas ,75061</span>
+               <a href="#"><i class="fa fa-map-marker"></i>	<span>2705 Briarcliff Dr , Irving Texas ,75062</span>
 
                </a>
                <div class="header-top-wrapper">

@@ -1080,7 +1080,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="home-counter_image">
-                    <a href="https://dfwblackcarlimollc.com">
+                    <a href="/booking">
                         <img class="modify-img" data-image-small="{{asset('Client/assets/img/home-images/1.jpg')}}"
                             data-image-large="{{asset('Client/assets/img/home-images/1.jpg')}}"
                             data-image-standard="{{asset('Client/assets/img/home-images/1.jpg')}}" data-src=""
@@ -1091,7 +1091,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="home-counter_image">
-                    <a href="https://dfwblackcarlimollc.com">
+                    <a href="/booking">
                         <img class="modify-img" data-image-small="{{asset('Client/assets/img/home-images/2.jpg')}}"
                             data-image-large="{{asset('Client/assets/img/home-images/2.jpg')}}"
                             data-image-standard="{{asset('Client/assets/img/home-images/2.jpg')}}" data-src=""
@@ -1116,7 +1116,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="home-counter_image">
-                        <a href="https://dfwblackcarlimollc.com">
+                        <a href="">
                             <img class="modify-img" data-image-small="{{asset('Client/assets/img/home-images/3.jpg')}}"
                                 data-image-large="{{asset('Client/assets/img/home-images/3.jpg')}}"
                                 data-image-standard="{{asset('Client/assets/img/home-images/3.jpg')}}" data-src=""
@@ -1126,7 +1126,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="home-counter_image">
-                        <a href="https://dfwblackcarlimollc.com">
+                        <a href="">
                             <img class="modify-img" data-image-small="{{asset('Client/assets/img/home-images/4.jpg')}}"
                                 data-image-large="{{asset('Client/assets/img/home-images/4.jpg')}}"
                                 data-image-standard="{{asset('Client/assets/img/home-images/4.jpg')}}" data-src=""
