@@ -87,7 +87,7 @@
 
                             </li>
                             <li class="nav-item">
-                                <a href="info@dfwtaxiriders.com" class="nav-link"><i class="fa fa-envelope"></i><span>info@dfwtaxiriders.com <br> rahman_pabel@yahoo.com</span></a>
+                                <a href="info@dfwtaxiriders.com" class="nav-link" style="text-transform: lowercase"><i class="fa fa-envelope"></i><span>info@dfwtaxiriders.com <br> rahman_pabel@yahoo.com</span></a>
                             </li>
                             <li class="nav-item">
                                 <a href="tel:+19724155255" class="nav-link"><i class="fa fa-phone"></i><span>+1 (972) 415-5255</span></a>

@@ -9,8 +9,7 @@
     <meta name="description" content="Experience the joy of luxury travel with our DFW black car and limo services. Book now for a truly unforgettable journey like never before." />
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('Server/assets/images/logo.png')}}">
-    <!-- Custom CSS -->
+   <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}" />
     <!--<link href="{{asset('Server/assets/extra-libs/c3/c3.min.css')}}" rel="stylesheet">-->
     <!--<link href="{{asset('Server/assets/libs/chartist/dist/chartist.min.css')}}" rel="stylesheet">-->
     <!--<link href="{{asset('Server/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css')}}" rel="stylesheet" />-->

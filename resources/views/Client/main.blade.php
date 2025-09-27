@@ -47,10 +47,10 @@
                             data-rotate="0" data-saveperformance="off" data-title="Car Image" data-description="">
                             <!-- MAIN IMAGE -->
                             <picture>
-                                <source media="(max-width: 575px)" srcset="{{asset('Client/assets/img/Mobile-1.jpg')}}">
+                                <source media="(max-width: 575px)" srcset="{{asset('Client/assets/img/slider/slider_01.jpg')}}">
                                 <img class="modify-img" data-bgposition="bottom" data-bgfit="cover"
                                     data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina
-                                    src="{{asset('Client/assets/img/Desktop-1.jpg')}}" alt="" />
+                                    src="{{asset('Client/assets/img/slider/slider_01.jpg')}}" alt="" />
                             </picture>
 
                             <!-- Contents -->
@@ -77,10 +77,10 @@
                             data-rotate="0" data-saveperformance="off" data-title="Car Image" data-description="">
                             <!-- MAIN IMAGE -->
                             <picture>
-                                <source media="(max-width: 575px)" srcset="{{asset('Client/assets/img/Mobile-2.jpg')}}">
+                                <source media="(max-width: 575px)" srcset="{{asset('Client/assets/img/slider/slider_02.jpg')}}">
                                 <img class="modify-img" data-bgposition="bottom" data-bgfit="cover"
                                     data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina
-                                    src="{{asset('Client/assets/img/Desktop-2.jpg')}}" alt="" />
+                                    src="{{asset('Client/assets/img/slider/slider_02.jpg')}}" alt="" />
                             </picture>
                             <!-- Contents -->
                             <div class="tp-caption tp-resizeme" data-x="center" data-hoffset="0" data-y="middle"
@@ -101,7 +101,7 @@
                         </li>
 
                         <!-- SLIDE  3-->
-                        <li data-index="rs-672" class="dark" data-transition="slidingoverlayleft" data-slotamount="default"
+                        {{-- <li data-index="rs-672" class="dark" data-transition="slidingoverlayleft" data-slotamount="default"
                             data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb=""
                             data-rotate="0" data-saveperformance="off" data-title="Car Image" data-description="">
                             <!-- MAIN IMAGE -->
@@ -125,7 +125,7 @@
                                 <a href="{{route('Booking')}}" class="button">Book Now</a>
                             </div>
 
-                        </li>
+                        </li> --}}
                     </ul>
                     <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important; color: #fff"></div>
                 </div>
@@ -1045,10 +1045,10 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="home-counter_image">
-                    <a href="https://dfwblackcarlimollc.com">
-                        <img class="modify-img" data-image-small="{{asset('Client/assets/img/counter-car3.jpg')}}"
-                            data-image-large="{{asset('Client/assets/img/counter-car3.jpg')}}"
-                            data-image-standard="{{asset('Client/assets/img/counter-car3.jpg')}}" data-src=""
+                    <a href="/booking">
+                        <img class="modify-img" data-image-small="{{asset('Client/assets/img/home-images/1.jpg')}}"
+                            data-image-large="{{asset('Client/assets/img/home-images/1.jpg')}}"
+                            data-image-standard="{{asset('Client/assets/img/home-images/1.jpg')}}" data-src=""
                             src="{{asset('Client/assets/img/blur.jpg')}}" alt="" />
                     </a>
 
@@ -1056,10 +1056,10 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="home-counter_image">
-                    <a href="https://dfwblackcarlimollc.com">
-                        <img class="modify-img" data-image-small="{{asset('Client/assets/img/counter-car4.webp')}}"
-                            data-image-large="{{asset('Client/assets/img/counter-car4.webp')}}"
-                            data-image-standard="{{asset('Client/assets/img/counter-car4.webp')}}" data-src=""
+                    <a href="/booking">
+                        <img class="modify-img" data-image-small="{{asset('Client/assets/img/home-images/2.jpg')}}"
+                            data-image-large="{{asset('Client/assets/img/home-images/2.jpg')}}"
+                            data-image-standard="{{asset('Client/assets/img/home-images/2.jpg')}}" data-src=""
                             src="{{asset('Client/assets/img/blur.jpg')}}" alt="" />
                     </a>
 
@@ -1081,20 +1081,20 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="home-counter_image">
-                        <a href="https://dfwblackcarlimollc.com">
-                            <img class="modify-img" data-image-small="{{asset('Client/assets/img/counter-car1.jpg')}}"
-                                data-image-large="{{asset('Client/assets/img/counter-car1.jpg')}}"
-                                data-image-standard="{{asset('Client/assets/img/counter-car1.jpg')}}" data-src=""
+                        <a href="">
+                            <img class="modify-img" data-image-small="{{asset('Client/assets/img/home-images/3.jpg')}}"
+                                data-image-large="{{asset('Client/assets/img/home-images/3.jpg')}}"
+                                data-image-standard="{{asset('Client/assets/img/home-images/3.jpg')}}" data-src=""
                                 src="{{asset('Client/assets/img/blur.jpg')}}" alt="" />
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="home-counter_image">
-                        <a href="https://dfwblackcarlimollc.com">
-                            <img class="modify-img" data-image-small="{{asset('Client/assets/img/counter-car2.jpg')}}"
-                                data-image-large="{{asset('Client/assets/img/counter-car2.jpg')}}"
-                                data-image-standard="{{asset('Client/assets/img/counter-car2.jpg')}}" data-src=""
+                        <a href="">
+                            <img class="modify-img" data-image-small="{{asset('Client/assets/img/home-images/4.jpg')}}"
+                                data-image-large="{{asset('Client/assets/img/home-images/4.jpg')}}"
+                                data-image-standard="{{asset('Client/assets/img/home-images/4.jpg')}}" data-src=""
                                 src="{{asset('Client/assets/img/blur.jpg')}}" alt="" />
                         </a>
                     </div>
