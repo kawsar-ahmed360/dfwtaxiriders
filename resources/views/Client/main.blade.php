@@ -625,30 +625,17 @@
 
             <div class="testimonial-home text-white"> <!-- fixed typo: testimonaial-home → testimonial-home -->
                 <div class="testimonial-carousel owl-carousel"> <!-- add owl-carousel class -->
+                    
+                    @foreach (@$testimonial as $key=>$t)
+                        
+                    
                     <div class="item">
                         <div class="icon-container"><i class="fa fa-commenting-o" aria-hidden="true"></i>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quibusdam accusamus perferendis
-                            architecto eius quas voluptatum, illo minima placeat, inventore ea asperiores beatae dolor modi
-                            nobis saepe? Ipsa, ut aspernatur.</p>
-                        <div class="author">Author</div>
+                        <p>{{@$t->short}}</p>
+                        <div class="author">{{@$t->name}}</div>
                     </div>
-                    <div class="item">
-                        <div class="icon-container"><i class="fa fa-commenting-o" aria-hidden="true"></i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quibusdam accusamus perferendis
-                            architecto eius quas voluptatum, illo minima placeat, inventore ea asperiores beatae dolor modi
-                            nobis saepe? Ipsa, ut aspernatur.</p>
-                        <div class="author">Author</div>
-                    </div>
-                    <div class="item">
-                        <div class="icon-container"><i class="fa fa-commenting-o" aria-hidden="true"></i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quibusdam accusamus perferendis
-                            architecto eius quas voluptatum, illo minima placeat, inventore ea asperiores beatae dolor modi
-                            nobis saepe? Ipsa, ut aspernatur.</p>
-                        <div class="author">Author</div>
-                    </div>
+                 @endforeach
                 </div>
             </div>
         </div>
@@ -668,42 +655,20 @@
                 </div>
             </div>
             <div class="row g-4">
+               @foreach (@$blog as $key=>$b)
+                   
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card mb-4">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbQ_WshQjF1mL3M_Z4AZgFSZ72-TNSqg8Tsg&s"
+                        <img src="{{(@$b->image)?url('upload/BlogManage/'.@$b->image):''}}"
                             class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of
-                                the card's content.</p>
-                            <a href="#" class="button">Read More</a>
+                            <h5 class="card-title">{{@$b->title}}</h5>
+                            <p class="card-text pb-4">{{@$b->short}}</p>
+                            <a href="{{route('BlogDetails',@$b->slug)}}" class="button">Read More</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                     <div class="card mb-4">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbQ_WshQjF1mL3M_Z4AZgFSZ72-TNSqg8Tsg&s"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of
-                                the card's content.</p>
-                            <a href="#" class="button ">Ream More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                     <div class="card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbQ_WshQjF1mL3M_Z4AZgFSZ72-TNSqg8Tsg&s"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of
-                                the card's content.</p>
-                            <a href="#" class="button">Read More</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

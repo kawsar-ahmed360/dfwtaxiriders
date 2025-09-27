@@ -70,9 +70,9 @@ class BlogManageController extends Controller
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            @unlink('public/upload/BlogManage/'.@$store->image);
+            @unlink('upload/BlogManage/'.@$store->image);
             $fullName = time().'.'.$image->getClientOriginalExtension();
-            Image::make($image)->resize(1200,720)->save('public/upload/BlogManage/'.$fullName);
+            Image::make($image)->resize(1200,720)->save('upload/BlogManage/'.$fullName);
             $store->image = $fullName;
             $store->save();
         }
