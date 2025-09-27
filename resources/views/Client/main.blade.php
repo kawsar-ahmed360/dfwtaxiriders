@@ -458,7 +458,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-4 col-lg-4">
-                            <img src="https://getcab.ancorathemes.com/wp-content/uploads/2016/10/car.jpg" alt="yellow-cab">
+                            <img src={{asset('Client/assets/img/home-images/taxi.jpg')}} alt="yellow-cab">
                         </div>
                         <div class="col-12 col-md-4 col-lg-4 item-row">
                             <div class="our_benifits_item right">
@@ -1114,7 +1114,7 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                {{-- <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="home-counter_image">
                         <a href="">
                             <img class="modify-img" data-image-small="{{asset('Client/assets/img/home-images/3.jpg')}}"
@@ -1123,11 +1123,11 @@
                                 src="{{asset('Client/assets/img/blur.jpg')}}" alt="" />
                         </a>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                </div> --}}
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="home-counter_image">
                         <a href="">
-                            <img class="modify-img" data-image-small="{{asset('Client/assets/img/home-images/4.jpg')}}"
+                            <img class="modify-img" style="object-fit: contain; top: -120px;" data-image-small="{{asset('Client/assets/img/home-images/4.jpg')}}"
                                 data-image-large="{{asset('Client/assets/img/home-images/4.jpg')}}"
                                 data-image-standard="{{asset('Client/assets/img/home-images/4.jpg')}}" data-src=""
                                 src="{{asset('Client/assets/img/blur.jpg')}}" alt="" />
